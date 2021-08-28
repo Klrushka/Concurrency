@@ -1,13 +1,17 @@
-package task2;
+package task5;
+
+import task2.Fibonacci;
+
 
 import java.util.concurrent.Callable;
 
-public class Fibonacci implements Runnable, Callable<String> {
+
+public class CallFib implements Callable<String> {
     private static int counter = 0;
     private final int id = counter;
     private final int howMach;
 
-    public Fibonacci(int howMach){
+    public CallFib (int howMach){
         this.howMach = howMach;
         counter++;
     }
@@ -18,18 +22,11 @@ public class Fibonacci implements Runnable, Callable<String> {
     }
 
     @Override
-    public void run() {
-        for (int i = 0; i < howMach; i++) {
-            System.out.println("#" + id + " " + fib(i + 1));
-        }
-    }
-
-    @Override
     public String call() throws Exception {
         int sum = 0;
         for (int i = 0; i < howMach; i++){
             sum += fib(i);
         }
-        return "#" + id + " " + sum;
+        return "#" + id + " sum of " + howMach + " values = " + sum;
     }
 }
