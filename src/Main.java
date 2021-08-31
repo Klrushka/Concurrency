@@ -1,5 +1,9 @@
 import task1.TestClass;
 import task2.Fibonacci;
+import task26.Chef;
+import task26.Meal;
+import task26.Restaurant;
+import task26.WaitPerson;
 import task5.CallFib;
 import task6.SleepingTask;
 
@@ -34,7 +38,7 @@ public class Main {
          */
 
 
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             new Thread(new Fibonacci(10)).start();
         }
 
@@ -48,11 +52,11 @@ public class Main {
         ExecutorService executorService = Executors.newCachedThreadPool();
         List<Future<String>> callFibs = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             callFibs.add(executorService.submit(new CallFib(i)));
         }
 
-        for (Future<String> fs : callFibs){
+        for (Future<String> fs : callFibs) {
             try {
                 System.out.println(fs.get());
             } catch (InterruptedException | ExecutionException e) {
@@ -75,23 +79,19 @@ public class Main {
         System.out.println("Enter please, how many times we will wait...");
         int times = scanner.nextInt();
 
-        for (int i = 0; i < times; i++){
+        for (int i = 0; i < times; i++) {
             executorService1.execute(new SleepingTask());
         }
         executorService1.shutdown();
 
 
+        /*
+        Exercise 26: (8) Add a BusBoy class to Restaurant.java. After the meal is delivered,
+        the WaitPerson should notify the BusBoy to clean up.
+         */
 
 
-
-
-
-
-
-
-
-
-
+        new Restaurant();
 
     }
 }
