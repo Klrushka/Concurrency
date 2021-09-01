@@ -93,5 +93,38 @@ public class Main {
 
         new Restaurant();
 
+
+        /*
+        Exercise 31: (8) Change DeadlockingDiningPhilosophers.java so that when a
+        philosopher is done with its chopsticks, it drops them into a bin. When a philosopher wants
+        to eat, it takes the next two available chopsticks from the bin. Does this eliminate the
+        possibility of deadlock? Can you reintroduce deadlock by simply reducing the number of
+        available chopsticks?
+
+
+
+        start in pack
+
+        Can you reintroduce deadlock by simply reducing the number of
+        available chopsticks?
+
+        if we take 2 chopsticks, yes
+
+
+        Does this eliminate the possibility of deadlock?
+
+        Yes, but if philosophers put sticks in the bin, we don't need 5 sticks
+        */
+
+
+
+
+        /*
+
+         */
+
+
+
+
     }
 }
