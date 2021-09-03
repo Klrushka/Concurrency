@@ -4,16 +4,14 @@ import task26.Chef;
 import task26.Meal;
 import task26.Restaurant;
 import task26.WaitPerson;
+import task35.*;
 import task5.CallFib;
 import task6.SleepingTask;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -108,7 +106,7 @@ public class Main {
         Can you reintroduce deadlock by simply reducing the number of
         available chopsticks?
 
-        if we take 2 chopsticks, yes
+        no
 
 
         Does this eliminate the possibility of deadlock?
@@ -123,11 +121,9 @@ public class Main {
         Exercise 35: (8) Modify BankTellerSimulation.java so that it represents Web clients
         making requests of a fixed number of servers. The goal is to determine the load that the
         group of servers can handle.
+
+        start in WebStart
          */
-
-
-
-
 
 
     }
